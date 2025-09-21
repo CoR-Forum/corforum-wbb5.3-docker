@@ -1,0 +1,14 @@
+services:
+  corforum:
+    # Uncomment the build section below if you want to build the image locally instead of pulling from GHCR
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: ghcr.io/CoR-Forum/corforum-wbb5.3-docker:latest
+    ports:
+      - "29871:80"
+    restart: unless-stopped
+    volumes:
+      - ./data/corforum-web/web:/var/www/html
+      - ./logs/corforum-httpd/apache2:/var/log/apache2 # webserver logs will be saved in this directory
+      - ./logs/corforum-httpd/cron:/var/log/cron
