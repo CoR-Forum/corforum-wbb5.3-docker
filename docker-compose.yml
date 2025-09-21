@@ -4,7 +4,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    image: ghcr.io/CoR-Forum/corforum-wbb5.3-docker:latest
+    image: ghcr.io/cor-forum/corforum-wbb5.3-docker:latest
     ports:
       - "29871:80"
     restart: unless-stopped
