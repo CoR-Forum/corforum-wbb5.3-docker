@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.actor }}/wbb5.3-php7.4-apache2
+          images: ghcr.io/${{ github.repository_owner }}/wbb5.3-php7.4-apache2
           tags: |
             type=ref,event=branch
             type=ref,event=pr
