@@ -8,7 +8,7 @@
 
 FROM mlocati/php-extension-installer:2 AS php_ext_installer
 
-FROM php:7.4-apache
+FROM ghcr.io/mpyw/php-eol-cve-2026-109618-109619:7.4.33-apache-bullseye-v1.1.0@sha256:84e87ad92400dfa7ae66aa475a5ccdc4d9c90e87e81f97ceb652c54a35b43d90
 
 # Use the official PHP extension installer via multi-stage to avoid remote ADD
 COPY --from=php_ext_installer /usr/bin/install-php-extensions /usr/local/bin/
